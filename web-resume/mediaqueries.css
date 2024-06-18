@@ -1,0 +1,15 @@
+@media screen and (max-width: 800px) {
+    .column-experience-education {
+        display: block;
+    
+    }
+    
+    #experience, #education {
+       flex: 50%;
+       margin-right: 10px;
+    }
+    
+    #experience > h2, #education > h2 {
+        text-align: center;
+    }
+}
