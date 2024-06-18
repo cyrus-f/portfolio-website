@@ -8,6 +8,9 @@ function toggleMenu() {
 }
 
 function toggleDarkMode() {
+    var links = document.getElementsByTagName("a");
+    var buttons = document.getElementsByTagName("button");
+    var icons = document.getElementsByClassName("icon")
     if (!isDarkMode) {
         /* toggle variable*/
         isDarkMode = true;
@@ -17,19 +20,16 @@ function toggleDarkMode() {
         document.body.style.color = "white";
         
         /* fix links */
-        var links = document.getElementsByTagName("a");
         for(var i=0;i<links.length;i++) {
             links[i].style.color = "white";
         }
 
         /* fix buttons */
-        var buttons = document.getElementsByTagName("button");
         for(var i=0;i<buttons.length;i++) {
             buttons[i].style.color = "white";
         }
 
         /** fix github and linkedin icons */
-        var icons = document.getElementsByClassName("icon")
         for(var i=0;i<icons.length;i++) {
             icons[i].style.filter = "invert(100%)";
         }
@@ -41,9 +41,20 @@ function toggleDarkMode() {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
         
-        var links = document.getElementsByTagName("a");
+        /* fix links */
         for(var i=0;i<links.length;i++) {
             links[i].style.color = "black";
+        }
+
+        /* fix buttons */
+        for(var i=0;i<buttons.length;i++) {
+            console.log(buttons[i].classList)
+            /* buttons[i].style.color = "black"; */
+        }
+
+        /** fix github and linkedin icons */
+        for(var i=0;i<icons.length;i++) {
+            icons[i].style.filter = "none";
         }
         
     }
