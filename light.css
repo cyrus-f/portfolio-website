@@ -11,6 +11,7 @@ body {
     /*
     background-color: #FBE9D0; 
     */
+    background-color: white;
 }
 
 html {
@@ -245,7 +246,7 @@ section {
 }
 
 .btn-color-2 {
-    background: none;
+    background: white;
 }
 
 .btn-color-2:hover {
